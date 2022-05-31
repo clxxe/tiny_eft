@@ -1,8 +1,8 @@
-tiny_eft
-- 666 line tarkov internal.
+tiny eft ( eft cheat in 666 lines )
+- small tarkov internal.
 
 has:
-no crt/stl
-small ongui hook
-box esp
-name esp
+- no crt/stl
+- small ongui hook
+- box esp
+- name esp
