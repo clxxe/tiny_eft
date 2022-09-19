@@ -221,7 +221,7 @@ namespace chloe {
 
 		if ( image_export_directory ) {
 			for ( std::uint32_t idx{ 0 }; idx < image_export_directory->NumberOfNames; idx++ ) {
-				const auto fn_name = reinterpret_cast< const char* >( base + reinterpret_cast< const std::uintptr_t* >( base + image_export_directory->AddressOfNames )[ idx ] );
+				const auto fn_name = reinterpret_cast< const char* >( base + reinterpret_cast< const unsigned long* >( base + image_export_directory->AddressOfNames )[ idx ] );
 				if ( chloe::compare( fn_name, function ) )
 					return reinterpret_cast< void* >( base + ( ( std::uint32_t* ) ( base + image_export_directory->AddressOfFunctions ) )[ ord_table[ idx ] ] );
 			}
